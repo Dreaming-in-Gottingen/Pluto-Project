@@ -33,7 +33,7 @@ void main()
     ret = sscanf(text, "$$AV$$csd%d,%d:", &idx, &size0);
     printf("ret:%d, idx:%d, vcsd_len:%d\n", ret, idx, size0);
     fread(buf, 1, size0, fp0);
-    fwrite(buf, 1, size0, fp2);
+    //fwrite(buf, 1, size0, fp2);
 
     // generate adts header
     assert(size0==2);
