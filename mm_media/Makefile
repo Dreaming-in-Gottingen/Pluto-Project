@@ -21,6 +21,8 @@ SRCS =  base/mm_base.c \
         muxer/muxers/muxer_writer.c \
         muxer/mpeg2ts_muxer/Mpeg2tsMuxerDrv.c \
         muxer/mpeg2ts_muxer/Mpeg2tsMuxer.c \
+        muxer/mp4_muxer/Mp4MuxerDrv.c \
+        muxer/mp4_muxer/Mp4Muxer.c \
 
 OBJS = $(notdir $(patsubst %.c, %.o, $(SRCS)))
 

@@ -16,13 +16,13 @@ int main()
 {
     ALOGW("--------------muxer_test begin--------------");
 
-    MuxerWriter *muxer = muxer_writer_create(MUXER_MODE_TS);
+    MuxerWriter *muxer = muxer_writer_create(MUXER_MODE_MP4);
     muxer->MuxerOpen(muxer);
 
 #if USE_STREAM_TYPE == 0
-    int fd = open("test_muxer.ts", O_CREAT|O_RDWR, 0666);
+    int fd = open("test_muxer.mp4", O_CREAT|O_RDWR, 0666);
     if (fd<0) {
-        ALOGE("open file for test_muxer.ts fail!");
+        ALOGE("open file for test_muxer.mp4 fail!");
         return -1;
     }
     muxer->MuxerIOCtrl(muxer, SET_STREAM_FD, fd, NULL);

@@ -8,7 +8,7 @@
 #include <mm_log.h>
 #include <muxer_writer.h>
 
-//extern MuxerWriter* create_mp4_muxer_handle();
+extern MuxerWriter* create_mp4_muxer_handle();
 extern MuxerWriter* create_mpeg2ts_muxer_handle();
 
 MuxerWriter *muxer_writer_create(int mode)
@@ -17,7 +17,7 @@ MuxerWriter *muxer_writer_create(int mode)
 
     switch (mode) {
     case MUXER_MODE_MP4:
-        //handle = create_mp4_muxer_handle();
+        handle = create_mp4_muxer_handle();
         break;
     case MUXER_MODE_TS:
         handle = create_mpeg2ts_muxer_handle();
